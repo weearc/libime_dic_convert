@@ -21,6 +21,12 @@ func PinyinRejoint(source string) string {
 	return stringJoint[:len(stringJoint)-1]
 }
 
+func PinyinReformat(word string, freq string) string {
+	pinyin := PinyinRejoint(word)
+	return word + " " + pinyin + " " + freq + "\n"
+
+}
+
 //func main()  {
 //	//hans := "测试一下，球墨铸铁"
 //	hans := "钇"
